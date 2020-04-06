@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        *  var 变量名 ={
+        *    属性名：值,
+        *   属性名：值,
+        * 函数名：function(){}
+        * };
+        *
+        * 对象的访问：
+        *    变量名.属性/函数名（）
+        * */
+        var obj={
+              name:"梅西",
+              age:18,
+              fun:function () {
+                  alert("姓名："+this.name+",年龄："+this.age);
+            }
+        };
+       alert(obj.fun());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

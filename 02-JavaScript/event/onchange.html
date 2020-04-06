@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+          function onchangeFun(){
+              alert('球队已经改变了');
+          }
+          window.onload=function () {
+              //1 获取标签对象
+             var selObj=  document.getElementById("sel01");
+              //2 通过标签对象，事件名=function(){}
+              selObj.onchange=function () {
+                 alert('球星已经改变了')
+              }
+          }
+    </script>
+</head>
+<body>
+        请选择你心中的球队：
+        <select name="" id="" onchange="onchangeFun()">
+            <option value="">--球队--</option>
+            <option value="">巴萨</option>
+            <option value="">皇马</option>
+            <option value="">利物浦</option>
+        </select>
+
+
+        请选择你心中的球星：
+        <select name="" id="sel01">
+            <option value="">--球星--</option>
+            <option value="">梅西</option>
+            <option value="">C罗</option>
+            <option value="">内马尔</option>
+        </select>
+</body>
+</html>
