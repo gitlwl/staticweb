@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/02-JavaScript/02-JavaScript.iml" filepath="$PROJECT_DIR$/02-JavaScript/02-JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_jQuery/03_jQuery.iml" filepath="$PROJECT_DIR$/03_jQuery/03_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-jQuery/04-jQuery.iml" filepath="$PROJECT_DIR$/04-jQuery/04-jQuery.iml" />
       <module fileurl="file://$PROJECT_DIR$/staticweb.iml" filepath="$PROJECT_DIR$/staticweb.iml" />
     </modules>
   </component>
