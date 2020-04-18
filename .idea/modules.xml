@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/03_jQuery/03_jQuery.iml" filepath="$PROJECT_DIR$/03_jQuery/03_jQuery.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-jQuery/04-jQuery.iml" filepath="$PROJECT_DIR$/04-jQuery/04-jQuery.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-xml/05-xml.iml" filepath="$PROJECT_DIR$/05-xml/05-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_web/05_web.iml" filepath="$PROJECT_DIR$/05_web/05_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/05book-static/05book-static.iml" filepath="$PROJECT_DIR$/05book-static/05book-static.iml" />
       <module fileurl="file://$PROJECT_DIR$/staticweb.iml" filepath="$PROJECT_DIR$/staticweb.iml" />
     </modules>
