@@ -25,6 +25,7 @@ public class ParameterServlet  extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //设置请求体的字符集为UTF-8，从而解决post请求的中文乱码问题
+        //在获取请求参数之前调用才有效
         req.setCharacterEncoding("UTF-8");
         System.out.println("-------doPost--------");
         //获取请求的参数
