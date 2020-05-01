@@ -1,5 +1,5 @@
 package com.atguigu.test;
-import com.atguigu.utils.jdbcUtils;
+import com.atguigu.utils.JdbcUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -8,9 +8,9 @@ public class JdbcUtilsTest {
     @Test
     public void testJdbcUtils(){
         for (int i=0;i<100;i++){
-            Connection connection = jdbcUtils.getConnectin();
+            Connection connection = JdbcUtils.getConnection();
             System.out.println(connection);
-            jdbcUtils.close(connection);
+            JdbcUtils.close(connection);
         }
     }
 }
