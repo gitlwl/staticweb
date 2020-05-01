@@ -1,5 +1,7 @@
 package com.atguigu.pojo;
 
+
+/*数据库对应的javabean对象*/
 public class User {
     private Integer id;
     private String username;
