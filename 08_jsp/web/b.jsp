@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8"
-        errorPage="/error500.jsp"
+        isErrorPage="true"
          language="java" %>
 <!--
  errorpage 表示错误后自动跳转去的路径
@@ -34,7 +34,6 @@
 </head>
 <body>
     b.jsp页面
-
 
 </body>
 </html>
