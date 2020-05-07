@@ -15,12 +15,12 @@
         jsp的九大内置对象
 
       request   请求对象
-      responses 响应对象
+      responses 响应对象 用于设置返回给客户端的内容（输出）
       pageContext jsp的上下文对象
       session 会话对象
       application  ServletContext对象
       config    ServletConfig对象
-      out      jsp输出流对象
+      out      jsp输出流对象 给用户做输出使用
       page   指向当前jsp的对象
       exception  异常对象
 
@@ -48,7 +48,13 @@
         application域是否有值：<%=application.getAttribute("key")%> <br>
 
         <%
-            request.getRequestDispatcher("/scope2.jsp").forward(request,response);
+           // request.getRequestDispatcher("/scope2.jsp").forward(request,response);
+
         %>
+        <%-- <jsp:forward page=""></jsp:forward>
+          请求转发标签，功能就是请求转发
+        page属性设置请求转发的路径
+        --%>
+        <jsp:forward page="/scope2.jsp"></jsp:forward>
 </body>
 </html>

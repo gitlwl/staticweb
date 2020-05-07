@@ -15,12 +15,12 @@
         jsp的九大内置对象
 
       request   请求对象
-      responses 响应对象
+      responses 响应对象 用于设置返回给客户端的内容（输出）
       pageContext jsp的上下文对象
       session 会话对象
       application  ServletContext对象
       config    ServletConfig对象
-      out      jsp输出流对象
+      out      jsp输出流对象 给用户做输出使用
       page   指向当前jsp的对象
       exception  异常对象
 
@@ -30,6 +30,9 @@
       session（HttpSession类） 一个会话范围内有效（打开浏览器访问浏览器，直到关闭浏览器）
       application（ServletContext类）整个web工程范围内都有效（只要web工程不停止，数据都在）
       域对象是可以像Map一样存取数据的对象，四个域对象功能一样，不同的是它们对数据的存取范围
+
+      四个域预先顺序，从小到大的范围的顺序
+      pageContext---request----session ---application
         --%>
         <h1>scope.jsp页面</h1>
         <%
@@ -45,7 +48,13 @@
         application域是否有值：<%=application.getAttribute("key")%> <br>
 
         <%
-            request.getRequestDispatcher("/scope2.jsp").forward(request,response);
+           // request.getRequestDispatcher("/scope2.jsp").forward(request,response);
+
         %>
+        <%-- <jsp:forward page=""></jsp:forward>
+          请求转发标签，功能就是请求转发
+        page属性设置请求转发的路径
+        --%>
+        <jsp:forward page="/scope2.jsp"></jsp:forward>
 </body>
 </html>
