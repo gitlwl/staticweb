@@ -37,5 +37,9 @@
     ${empty emptyArr}<br>
     ${empty emptyList}<br>
     ${empty emptyMap}<br>
+    <hr>
+    ${12==12?"国歌帅":"国歌又骗人"}
+
+
 </body>
 </html>
