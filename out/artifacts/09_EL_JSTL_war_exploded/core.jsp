@@ -35,5 +35,43 @@
     <c:if test="${12==12}">
         <h1>12等于12</h1>
     </c:if>
+    <hr>
+    <%--
+        <c:choose> <c:when> <c:otherwise> 标签
+        作用：多路判断，跟switch...case...default 非常接近
+        choose 标签开始选择判断
+        when标签表示每一种判断情况
+           test属性表示当前判断情况的值
+         otherwise标签表示剩下的情况
+
+
+         注：标签里不能使用html注释，要使用jsp注释
+             when标签的父标签一定要是choose标签
+
+    --%>
+
+    <%
+        request.setAttribute("height",178);
+    %>
+    <c:choose>
+        <c:when test="${requestScope.height>190}">
+            <h2>小巨人</h2>
+        </c:when>
+
+        <c:when test="${requestScope.height>180}">
+            <h2>很高</h2>
+        </c:when>
+
+        <c:when test="${requestScope.height>170}">
+            <h2>还可以</h2>
+        </c:when>
+
+        <c:otherwise>
+            <h2>剩下小于170的情况</h2>
+        </c:otherwise>
+    </c:choose>
+
+    <hr>
+
 </body>
 </html>
