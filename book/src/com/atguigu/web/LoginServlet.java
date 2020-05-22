@@ -23,10 +23,10 @@ public class LoginServlet  extends HttpServlet {
         //如果等于null,登录失败
         if (loginUser==null){
             //失败,跳回登录页面
-            req.getRequestDispatcher("/pages/user/login.html").forward(req,resp);
+            req.getRequestDispatcher("/pages/user/login.jsp").forward(req,resp);
         }else{
             //登录成功    成功,跳转到成功页面login_success.html
-            req.getRequestDispatcher("/pages/user/login_success.html").forward(req,resp);
+            req.getRequestDispatcher("/pages/user/login_success.jsp").forward(req,resp);
         }
 
     }

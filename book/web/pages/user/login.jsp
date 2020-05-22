@@ -1,12 +1,12 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>尚硅谷会员登录页面</title>
-	<!--写base标签，永远固定相对路径跳转的结果-->
-	<base href="http://localhost:8080/book/">
+	<%--	静态包含 base标签，css样式，jquery文件--%>
+	<%@include file="/pages/common/head.jsp"%>
 
-<link type="text/css" rel="stylesheet" href="static/css/style.css" >
 </head>
 <body>
 		<div id="login_header">
@@ -24,7 +24,7 @@
 						<div class="login_box">
 							<div class="tit">
 								<h1>尚硅谷会员</h1>
-								<a href="regist.html">立即注册</a>
+								<a href="regist.jsp">立即注册</a>
 							</div>
 							<div class="msg_cont">
 								<b></b>
@@ -48,10 +48,8 @@
 					</div>
 				</div>
 			</div>
-		<div id="bottom">
-			<span>
-				尚硅谷书城.Copyright &copy;2015
-			</span>
-		</div>
+		<%--静态包含页脚内容	--%>
+		<%@include file="/pages/common/footer.jsp"%>
+
 </body>
 </html>

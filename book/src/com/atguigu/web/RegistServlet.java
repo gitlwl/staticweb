@@ -28,13 +28,13 @@ public class RegistServlet extends HttpServlet {
                 System.out.println("用户名["+username+"]已存在");
                 //不可用
                 //跳转到注册页面
-                req.getRequestDispatcher("/pages/user/regist.html").forward(req,resp);
+                req.getRequestDispatcher("/pages/user/regist.jsp").forward(req,resp);
             }else {
                      //可用
                     //调用service保存到数据库
                 userService.registUser(new User(null,username,password,email));
                 //跳到注册成功页面regist_success.html
-                req.getRequestDispatcher("/pages/user/regist_success.html").forward(req,resp);
+                req.getRequestDispatcher("/pages/user/regist_success.jsp").forward(req,resp);
             }
 
 
@@ -42,7 +42,7 @@ public class RegistServlet extends HttpServlet {
             //不正确
             //跳回注册页面
             System.out.println("验证码["+code+"]错误");
-            req.getRequestDispatcher("/pages/user/regist.html").forward(req,resp);
+            req.getRequestDispatcher("/pages/user/regist.jsp").forward(req,resp);
 
         }
 

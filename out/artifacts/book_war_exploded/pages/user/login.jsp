@@ -1,13 +1,16 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>尚硅谷会员登录页面</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+	<%--	静态包含 base标签，css样式，jquery文件--%>
+	<%@include file="/pages/common/head.jsp"%>
+
 </head>
 <body>
 		<div id="login_header">
-			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
+			<img class="logo_img" alt="" src="static/img/logo.gif" >
 		</div>
 		
 			<div class="login_banner">
@@ -21,14 +24,14 @@
 						<div class="login_box">
 							<div class="tit">
 								<h1>尚硅谷会员</h1>
-								<a href="regist.html">立即注册</a>
+								<a href="regist.jsp">立即注册</a>
 							</div>
 							<div class="msg_cont">
 								<b></b>
 								<span class="errorMsg">请输入用户名和密码</span>
 							</div>
 							<div class="form">
-								<form action="login_success.html">
+								<form action="loginServlet" method="post">
 									<label>用户名称：</label>
 									<input class="itxt" type="text" placeholder="请输入用户名" autocomplete="off" tabindex="1" name="username" />
 									<br />
