@@ -1,6 +1,7 @@
 package com.atguigu.servlet;
 
 import org.apache.commons.io.IOUtils;
+import sun.misc.BASE64Encoder;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -10,9 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.Base64;
 
 public class Download extends HttpServlet {
+
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //1获取要下载的文件名
@@ -30,7 +36,14 @@ public class Download extends HttpServlet {
         //attachment表示附件，表示下载使用
         //filename表示指定下载的文件名
         //URL编码把汉字转换成%xx%xx的格式
-        resp.setHeader("Content-Disposition","attachment;filename="+ URLEncoder.encode("中国.jpg","UTF-8"));
+        if (req.getHeader("User-Agent").contains("Firefox")){
+            //火狐浏览器 ---base64编码
+            resp.setHeader("Content-Disposition","attachment;filename==?UTF-8?B?"+new BASE64Encoder().encode("中国.jpg".getBytes("UTF-8"))+"?=");
+        }else {
+            // ie/chrome --url编码
+            resp.setHeader("Content-Disposition","attachment;filename="+ URLEncoder.encode("中国.jpg","UTF-8"));
+        }
+
         /*
         *    /斜杠被服务器解析表示地址为http://ip:port/工程名/ 映射到代码的web目录
         * */
